@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: createCustomerTable
+      author: your_name
+      changes:
+        - createTable:
+            tableName: customer
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(255)
+  - changeSet:
+      id: insertSampleCustomer
+      author: your_name
+      changes:
+        - insert:
+            tableName: customer
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 1
+              - column:
+                  name: name
+                  value: default

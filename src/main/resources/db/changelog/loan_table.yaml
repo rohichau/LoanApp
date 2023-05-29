@@ -1,0 +1,35 @@
+databaseChangeLog:
+ - changeSet:
+      id: createLoanTable
+      author: your_name
+      changes:
+        - createTable:
+            tableName: loan
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: amount
+                  type: decimal(19, 2)
+              - column:
+                  name: term
+                  type: int
+              - column:
+                  name: customer_id
+                  type: bigint
+              - column:
+                  name: state
+                  type: varchar(255)
+              - column:
+                  name: creation_date
+                  type: date
+        - addForeignKeyConstraint:
+            baseTableName: loan
+            baseColumnNames: customer_id
+            referencedTableName: customer
+            referencedColumnNames: id
+            constraintName: fk_loan_customer

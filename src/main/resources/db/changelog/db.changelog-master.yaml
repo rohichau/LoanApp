@@ -1,0 +1,10 @@
+databaseChangeLog:
+- include:
+    file: db/changelog/customer_table.yaml
+- include:
+    file: db/changelog/user_table.yaml
+- include:
+    file: db/changelog/loan_table.yaml
+- include:
+    file: db/changelog/loan_repayment_table.yaml
+
