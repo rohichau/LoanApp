@@ -1,17 +1,19 @@
-Loan Management System
+### Loan Management System
 The Loan Management System is an application that allows users to manage loans and repayments. It provides several controllers to handle loan-related operations, including creating loans, approving loans, retrieving customer loans, and adding repayments.
 
-Controllers
-LoanController
+### Controllers
+## LoanController
 The LoanController is responsible for handling loan-related operations. It provides the following endpoints:
 
 POST /api/loans: Creates a new loan based on the provided loan request.
 PUT /api/admin/loans/{loanId}/approve: Approves the loan with the specified ID.
-CustomerLoanController
+
+## CustomerLoanController
 The CustomerLoanController is responsible for managing customer loans. It provides the following endpoint:
 
 GET /api/customers/{customerId}/loans: Retrieves the loans associated with a specific customer.
-RepaymentController
+
+## RepaymentController
 The RepaymentController handles repayment-related operations. It provides the following endpoint:
 
 POST /api/customers/{customerId}/loans/{loanId}/repayments: Adds a repayment for a specific loan.
@@ -37,5 +39,3 @@ Conclusion
 The Loan Management System provides a convenient way to manage loans and repayments through a set of intuitive RESTful APIs. By leveraging the provided controllers and endpoints, users can easily create loans, approve loans, retrieve customer loans, and add repayments. The project is built using Java and Spring Boot, and includes Swagger documentation for easy API exploration and testing.
 
 Feel free to explore the codebase and make any necessary modifications or additions to suit your specific requirements.
-
-Please note that this is just an example README file. You can customize it further to include additional details, such as installation instructions, dependencies, or deployment guidelines, based on your project's specific needs.
